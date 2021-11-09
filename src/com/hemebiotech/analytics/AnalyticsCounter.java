@@ -6,31 +6,28 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
+
 
 public class AnalyticsCounter {
 	/**
 	 * @author j.de-la-osa
-	 * debug application java
-	 * @param 
+	 * debug java application readf of symptoms
+	 * 
 	 * 
 	 */
 	public static void main(String args[]) throws Exception {
 		
-		/**
-		 * @author j.de-la-osa
-		 * @return Récupération du fichier des symptomes et active la lecture du fichier
-		 */
-		ReadSymptomDataFromFile readSymptomDataFromFile = new ReadSymptomDataFromFile("./symptoms.txt");
+		/* get give file of symptoms*/
+		ReadSymptomDataFromFile readSymptomDataFromFile = new ReadSymptomDataFromFile("src/ressources/symptoms.txt");
+		List<String> symptomsRead = readSymptomDataFromFile.getSymptoms();
 		
-	
-	
-		/**
-		 * @author j.de-la-osa
-		 * @return active la mise en forme du fichier
-		 */
+		/* Get method of calcul number to symtoms*/
 		CalculToElementOfListOfSymtoms calculToElementOfListOfSymtoms = new CalculToElementOfListOfSymtoms();
-		calculToElementOfListOfSymtoms.calculToFrequenceElement(readSymptomDataFromFile.getSymptoms());
+		
+		/* Get of list of symptoms*/
+		calculToElementOfListOfSymtoms.calculToFrequenceElement(symptomsRead);
 		
 	}
 }

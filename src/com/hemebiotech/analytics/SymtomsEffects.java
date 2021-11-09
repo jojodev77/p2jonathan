@@ -2,9 +2,9 @@ package com.hemebiotech.analytics;
 
 public class SymtomsEffects {
 
-	public int headacheCount = 0;	
-	public int rashCount = 0;		
-	public int pupilCount = 0;	
+	private int headacheCount = 0;	
+	private int rashCount = 0;		
+	private int pupilCount = 0;	
 	
 	public int getHeadacheCount() {
 		return headacheCount;
